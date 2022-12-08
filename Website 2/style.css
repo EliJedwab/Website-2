@@ -1,0 +1,362 @@
+.container1 {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(0, 0, 0);
+}
+.animatedNav {
+    flex-grow: right;
+    padding: 10px;
+}
+
+.topname {
+    color: white;
+    font-size: 35px;
+}
+
+.container2 {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(45, 122, 255);
+}
+
+.topnav {
+    display: flex;
+    background-color: rgb(45, 122, 255);
+    flex-grow: 1;
+    align-items: center;
+    font-size: 30px;
+   
+}
+
+.topnav a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.topnav a:hover {
+    color: #9fa4a8;
+    font-size: 35px;
+}
+
+.topNavList {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    flex-grow: 1;
+    justify-content: space-evenly;
+    
+}
+
+.topNavItem {
+    padding: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+.container3 {
+    display: flex;
+    flex-direction: row;
+}
+
+.container3 a {
+    color: black;
+    text-decoration: none;
+}
+
+
+.main {
+    display: flex;
+    flex-grow: 9;
+    flex-direction: column;
+    background-color: white;
+    padding: 10px;
+}
+
+.sidenav {
+   background-color: rgb(0, 0, 0);
+   display: flex;
+   flex-grow: 1;
+   justify-content: center;
+   height: 260px;
+
+}
+
+
+.sideNavItem {
+    display: flex;
+    border: 5px solid black;
+    padding: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 5px;
+    background-color: white;
+    
+     
+}
+
+.sideNavItem:hover {
+    background-color: rgb(218, 218, 218);
+}
+
+.container4 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 10px;
+    
+
+}
+
+.pic {
+    display: flex;
+    border: 4px solid black;
+    height: 250px;
+    width: 250px;
+    margin: 10px;
+    background-repeat: no-repeat;
+    justify-content: center;
+    position: relative;
+
+}
+.pic h3 {
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    bottom: 5px;
+    text-shadow: 2px 2px 2px black;
+
+}
+
+.faq {
+    background-color: transparent;
+    border: 1px solid #9fa4a8;
+    border-radius: 10px;
+    margin: 20px 0;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.faq.active {
+    background-color: white;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1), 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.faq.active::before, .faq.active::after {
+    content: '\f075';
+    font-family: 'Font Awesome 5 Free';
+    color: #2ecc71;
+    font-size: 7rem;
+    position: absolute;
+    opacity: 0.2;
+    top: 20px;
+    left: 20px;
+    z-index: 0;
+}
+
+.faq.active::before {
+    color: #3498db;
+    top: -10px;
+    left: -30px;
+    transform: rotateY(180deg);
+}
+
+.faq-title {
+    margin: 0 35px 0 0;
+}
+
+.faq-text {
+    display: none;
+    margin: 30px 0 0;
+}
+
+.faq.active .faq-text {
+    display: block;
+}
+
+.faq-toggle {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    padding: 0;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+
+.faq-toggle .fa-times {
+    display: none;
+}
+
+.faq.active .faq-toggle .fa-times {
+    display: block;
+    color: white;
+}
+
+.faq.active .faq-toggle .fa-chevron-down {
+    display: none;
+}
+
+.faq.active .faq-toggle {
+    background-color: #9fa4a8;
+}
+
+.animatedNav nav {
+    background-color: white;
+    padding: 20px;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    transition: width 0.6s linear;
+}
+
+.animatedNav nav.active {
+    width: 350px;
+}
+
+.animatedNav nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 0;
+    transition: width 0.6s linear;
+
+}
+
+.animatedNav nav.active ul {
+    width: 100%;
+}
+
+.animatedNav nav ul li {
+    transform: rotateY(0deg);
+    opacity: 0;
+    transition: transform 0.6s linear, opacity 0.6s linear;
+}
+
+.animatedNav nav.active ul li {
+    opacity: 1;
+    transform: rotateY(360deg);
+}
+
+.animatedNav nav ul a {
+    position: relative;
+    color: black;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.icon {
+    background-color: white;
+    border: 0;
+    cursor: pointer;
+    padding: 0;
+    position: relative;
+    height: 30px;
+    width: 30px;
+    
+}
+
+.icon:focus {
+    outline: 0;
+}
+
+.icon .line {
+    background-color: #5290f9;
+    height: 2px;
+    width: 20px;
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    transition: transform 0.6s linear;
+}
+
+.icon .line2 {
+    top: auto;
+    bottom: 10px;
+}
+
+nav.active .icon .line1 {
+    transform: rotate(-765deg) translateY(5.5px);
+}
+
+nav.active .icon .line2 {
+    transform: rotate(765deg) translateY(-5.5px);
+}
+
+.counter-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 30px 50px;
+    color: white;
+}
+
+.counter {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+/* @media (max-width: 580px ) {
+    body {
+        flex-direction: column;
+    }
+} */
+.container5 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.ripple {
+    
+    color: rgb(255, 255, 255);
+    display: flex;
+    font-size: 30px; 
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    height: 400px;
+    width: 700px;
+    background-image: url(/honey\ badger\ pic\ 7.png);
+    
+
+}
+
+
+button .circle {
+    position: absolute;
+    background-color: white;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    animation: scale .5s ease-out;
+}
+
+@keyframes scale {
+    to {
+        transform: translate(-50%, -50%) scale(3);
+        opacity: 0;
+    }
+}
+
+.selection {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    background-color: #b4e1ff;
+}
